@@ -13,10 +13,12 @@ public class FuncionesMat {
 	public static double entropia(double si,double no,double total){
 		return  ent1(si,total) + ent1(no,total);
 	}
-	public static double entropia(List<Pares> cantidad){
-		double res=0;
-		for(int i=0;i<cantidad.size();i++){
-			res = res + entropia(cantidad.get(i).getSi(),cantidad.get(i).getNo(),cantidad.get(i).getTotal());
+	public static double ganancia(List<Pares> cantidad){
+		
+		double total= cantidad.get(0).getTotal();
+		double res= entropia(cantidad.get(0).getSi(),cantidad.get(0).getNo(),total);
+		for(int i=1;i<cantidad.size();i++){
+			res = res - (cantidad.get(i).getTotal()/total)*entropia(cantidad.get(i).getSi(),cantidad.get(i).getNo(),cantidad.get(i).getTotal());
 		}
 		return res;
 	}
