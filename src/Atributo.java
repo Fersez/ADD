@@ -3,12 +3,12 @@ import java.util.List;
 
 public class Atributo {
 	String nombre;
-	Integer columna;
+	
 	List<String> valores;
-	public Atributo(String nombre,Integer columna){
+	public Atributo(String nombre,List<String> valores){
 		this.nombre=nombre;;
-		this.columna=columna;
-		valores= new LinkedList<String>();
+		
+		this.valores= valores;
 	}
 	public void add(String valor){
 		valores.add(valor);
@@ -24,12 +24,7 @@ public class Atributo {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public Integer getColumna() {
-		return columna;
-	}
-	public void setColumna(Integer columna) {
-		this.columna = columna;
-	}
+
 	public List<String> getValores() {
 		return valores;
 	}

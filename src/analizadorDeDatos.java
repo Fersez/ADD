@@ -3,14 +3,15 @@ import java.util.*;
 
 public class analizadorDeDatos {
 	Map<Integer,List<String>> datos; //= new HashMap<Integer,List<String>>();
-	List<List<String>> atributos;
+	List<Atributo> atributos;
 	List<Boolean> filas;
 	List<Boolean> columnas;
 	
-	public analizadorDeDatos(Map<Integer,List<String>> datos,List<List<String>> atributos){
+	public analizadorDeDatos(Map<Integer,List<String>> datos,List<Atributo> atributos){
 		this.datos=datos;
 		this.atributos=atributos;
 		filas=new LinkedList<Boolean>();
+		columnas=new LinkedList<Boolean>();
 		for(Integer i=0;i<datos.size();i++){
 			filas.add(new Boolean(true));
 		}
@@ -31,7 +32,7 @@ public class analizadorDeDatos {
 		return datos;
 	}
 
-	public List<List<String>> getAtributos() {
+	public List<Atributo> getAtributos() {
 		return atributos;
 	}
 
