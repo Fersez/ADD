@@ -6,6 +6,7 @@ public class test {
 		// TODO Auto-generated method stub
 		System.out.println(FuncionesMat.entropia(3,5,8));// correcto 0,954434003
 		
+		
 		Pares decision,moreno,rubio,rojo;
 		decision=new Pares(3,5);
 		moreno= new Pares(0,3);
